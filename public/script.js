@@ -1,4 +1,4 @@
-// import UAuth from '@uauth/js'
+import UAuth from '@uauth/js'
 
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
