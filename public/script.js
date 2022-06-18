@@ -1,3 +1,5 @@
+import UAuth from '@uauth/js'
+
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 // const myPeer = new Peer(undefined, {
@@ -16,6 +18,11 @@ const myPeer = new Peer( {
 //   port: "",
 //   path: "/peerjs",
 // });
+
+const uauth = new UAuth({
+  clientID: 'uauth_example_spa_id',
+  redirectUri: 'http://localhost:5000/callback',
+})
 
 var getUserMedia = 
 navigator.getUserMedia || 
