@@ -20,9 +20,14 @@ const myPeer = new Peer( {
 // });
 
 const uauth = new UAuth({
-  clientID: 'uauth_example_spa_id',
-  redirectUri: 'http://localhost:5000/callback',
+  // clientID: 'uauth_example_spa_id',
+  // redirectUri: 'http://localhost:5000/callback',
+    clientID: "aa3d2d7a-38ee-49a4-89ba-a6fe5398e570",
+    redirectUri: "http://localhost",
+    scope: "openid wallet email:optional humanity_check:optional",
 })
+
+
 
 window.login = async () => {
   try {
