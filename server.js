@@ -20,6 +20,14 @@ io.on('connection', socket => {
     socket.join(roomId)
     socket.broadcast.to(roomId).emit("user-connected", userId)
 
+    socket.on('user-connected', userId => {
+      // user is joining`
+    setTimeout(() => {
+        // user joined
+        connectToNewUser(userId, stream)
+      }, 1000)
+    })
+
     socket.on('disconnect', () => {
       socket.broadcast.to(roomId).emit("user-disconnected", userId)
     })
