@@ -29,15 +29,15 @@ const uauth = new UAuth({
 
 
 
-window.login = async () => {
-  try {
-    const authorization = await uauth.loginWithPopup()
+// window.login = async () => {
+//   try {
+//     const authorization = await uauth.loginWithPopup()
  
-    console.log(authorization)
-  } catch (error) {
-    console.error(error)
-  }
-}
+//     console.log(authorization)
+//   } catch (error) {
+//     console.error(error)
+//   }
+// }
 
 var getUserMedia = 
 navigator.getUserMedia || 
