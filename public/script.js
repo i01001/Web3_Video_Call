@@ -28,7 +28,7 @@ navigator.mediaDevices.getUserMedia({
   })
 
 
-  peer.on("call", function(call){
+  myPeer.on("call", function(call){
     getUserMedia({
           video:true,
           audio:true
