@@ -7,8 +7,8 @@ const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer( {
   secure:true,
   host: "web3-video-call-peer-server.herokuapp.com",
-  port: "443",
-  path: "/peerjs",
+  port: 443,
+  // path: "/peerjs",
 })
 
 // var peer = new Peer({

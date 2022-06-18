@@ -11,11 +11,11 @@ const PORT = process.env.PORT || 3000;
 //   allow_discovery: true,
 // };
 
-const { ExpressPeerServer } = require("peer")
-const peerServer = ExpressPeerServer(server, {
-    debug: true
-})
-app.use("/peerjs", peerServer);
+// const { ExpressPeerServer } = require("peer")
+// const peerServer = ExpressPeerServer(server, {
+//     debug: true
+// })
+// app.use("/peerjs", peerServer);
 
 // let peerServer = ExpressPeerServer(server, options);
 // app.use("/peerjs", peerServer);
