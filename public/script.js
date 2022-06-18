@@ -24,6 +24,16 @@ const uauth = new UAuth({
   redirectUri: 'http://localhost:5000/callback',
 })
 
+window.login = async () => {
+  try {
+    const authorization = await uauth.loginWithPopup()
+ 
+    console.log(authorization)
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 var getUserMedia = 
 navigator.getUserMedia || 
 navigator.webkitGetUserMedia || 
