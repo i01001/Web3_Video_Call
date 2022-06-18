@@ -19,7 +19,7 @@ app.get('/:room', (req, res) => {
 io.on('connection', socket => {
     socket.on('join-room', (roomId, userId) => {
       socket.join(roomId)
-    //   socket.to(roomId).broadcast.e('user-connected', userId)
+      socket.to(roomId).broadcast.e('user-connected', userId)
     })
 })
 
