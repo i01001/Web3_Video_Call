@@ -4,6 +4,12 @@ const myPeer = new Peer(undefined, {
   host: '/',
   port: '3002'
 })
+
+var getUserMedia = 
+navigator.getUserMedia || 
+navigator.webkitGetUserMedia || 
+navigator.mozGetUserMedia;
+
 const myVideo = document.createElement('video')
 myVideo.muted = true
 const peers = {}
@@ -20,6 +26,25 @@ navigator.mediaDevices.getUserMedia({
       addVideoStream(video, userVideoStream)
     })
   })
+
+
+  peer.on("call", function(call){
+    getUserMedia({
+          video:true,
+          audio:true
+    
+      }, function(stream){
+        call.answer(stream);
+        const video = document.createElement("video");
+        call.on("stream", function (remoteStream) {
+          addVideoStream(video, remoteStream);
+        });
+      }, function(err){
+          console.log(err);
+      })
+    })
+
+
 
   socket.on('user-connected', userId => {
     connectToNewUser(userId, stream)
