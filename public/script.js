@@ -6,9 +6,16 @@ const videoGrid = document.getElementById('video-grid')
 // })
 const myPeer = new Peer( {
   secure:true,
-  host: 'web3-video-call-peer-server.herokuapp.com',
-  port: 443
+  host: "web3-video-call-peer-server.herokuapp.com",
+  port: "443",
+  path: "/peerjs",
 })
+
+// var peer = new Peer({
+//   host: "yoursite.herokuapp.com",
+//   port: "",
+//   path: "/peerjs",
+// });
 
 var getUserMedia = 
 navigator.getUserMedia || 
