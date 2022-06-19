@@ -38,6 +38,7 @@
     "xhr2": "^0.2.1"
   },
   "devDependencies": {
+    
     "nodemon": "^2.0.4"
   }
 }
