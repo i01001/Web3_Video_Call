@@ -22,7 +22,11 @@ const PORT = process.env.PORT || 3000;
 
 
 app.set('view engine', 'ejs')
+app.set('view engine','html');
+
 app.use(express.static('public'))
+
+router.get('/', forwardAuthenticated, (req, res) => res.render('index.html')); 
 
 app.get('/', (req, res) => {
   res.redirect(`/${uuidV4()}`)
