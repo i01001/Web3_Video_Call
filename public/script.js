@@ -80,25 +80,25 @@ const myPeer = new Peer(undefined, {
 //   // path: "/peerjs",
 // })
 
-const uauth = new UAuth({
-  // clientID: 'uauth_example_spa_id',
-  // redirectUri: 'http://localhost:5000/callback',
-    clientID: "aa3d2d7a-38ee-49a4-89ba-a6fe5398e570",
-    redirectUri: 'http://localhost',
-    scope: "openid wallet email:optional humanity_check:optional"
+// const uauth = new UAuth({
+//   // clientID: 'uauth_example_spa_id',
+//   // redirectUri: 'http://localhost:5000/callback',
+//     clientID: "aa3d2d7a-38ee-49a4-89ba-a6fe5398e570",
+//     redirectUri: 'http://localhost',
+//     scope: "openid wallet email:optional humanity_check:optional"
 
-})
+// })
 
 
-window.login = async () => {
-  try {
-    const authorization = await uauth.loginWithPopup()
+// window.login = async () => {
+//   try {
+//     const authorization = await uauth.loginWithPopup()
  
-    console.log(authorization)
-  } catch (error) {
-    console.error(error)
-  }
-}
+//     console.log(authorization)
+//   } catch (error) {
+//     console.error(error)
+//   }
+// }
 
 
 var getUserMedia = 
