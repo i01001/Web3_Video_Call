@@ -22,12 +22,10 @@ const PORT = process.env.PORT || 3000;
 
 
 app.set('view engine', 'ejs')
-app.set('view engine','html');
 
 app.use(express.static('public'))
 
 var router = express.Router(); // need to add 
-var index = require('./routes/index')(router);
 
 app.get('/', (req, res) => {
   res.redirect(`/${uuidV4()}`)
