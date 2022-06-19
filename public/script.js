@@ -13,12 +13,6 @@ const myPeer = new Peer(undefined, {
 //   // path: "/peerjs",
 // })
 
-// var peer = new Peer({
-//   host: "yoursite.herokuapp.com",
-//   port: "",
-//   path: "/peerjs",
-// });
-
 const uauth = new UAuth({
   // clientID: 'uauth_example_spa_id',
   // redirectUri: 'http://localhost:5000/callback',
